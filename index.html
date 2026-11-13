@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Domenico D'Acquisto – CTU e Perito · Cripto-Asset Advisor</title>
+<style>
+  :root{--teal:#00617E;--teal-d:#00465C;--gold:#C9A84C;--navy:#1B2B4B;--paper:#F7F5EF}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Trebuchet MS",Calibri,Arial,sans-serif;background:var(--paper);color:var(--navy);padding:24px 16px}
+  .card{width:100%;max-width:420px;margin:0 auto;background:#fff;border-radius:18px;overflow:hidden;
+        box-shadow:0 10px 30px rgba(27,43,75,.12)}
+  .top{background:#00617F;padding:40px 40px 34px;text-align:center;position:relative}
+  .logo{width:100%;max-width:260px;height:auto;display:block;margin:0 auto}
+  .top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--gold)}
+  .mark{display:inline-flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;
+        border:2px solid var(--gold);font-size:30px;font-weight:bold;letter-spacing:1px;margin-bottom:14px}
+  .studio{font-size:13px;letter-spacing:3px;text-transform:uppercase;opacity:.9}
+  .body{padding:30px 28px 26px;text-align:center}
+  h1{font-size:26px;color:var(--teal-d);margin-bottom:6px}
+  .role{font-size:15px;color:#555;margin-bottom:4px}
+  .spec{font-size:17px;color:var(--teal);font-weight:bold;margin:16px 0 26px;line-height:1.4}
+  .spec span{display:block;font-size:14px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-top:4px}
+  .btn{display:block;text-decoration:none;border-radius:12px;padding:16px;font-size:17px;font-weight:bold;transition:.15s}
+  .btn-main{background:var(--teal);color:#fff;border:2px solid var(--teal)}
+  .btn-main:hover{background:var(--teal-d)}
+  .btn-sec{margin-top:12px;color:var(--teal);border:2px solid var(--teal);background:#fff;font-size:15px;padding:12px}
+  .contacts{margin-top:24px;padding-top:18px;border-top:1px solid #e6e1d3;font-size:14px;line-height:1.9}
+  .contacts a{color:var(--navy);text-decoration:none}
+  .foot{background:var(--navy);color:#cfd5e0;font-size:12px;text-align:center;padding:14px 20px;line-height:1.6}
+  .foot a{color:var(--gold);text-decoration:none}
+  #cv{display:none;max-width:820px;margin:32px auto 0;scroll-margin-top:16px}
+  #cv.open{display:block}
+  #cv h2{font-size:18px;color:var(--teal-d);text-align:center;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+  #cv h2::after{content:"";display:block;width:60px;height:3px;background:var(--gold);margin:10px auto 0}
+  .page{display:block;width:100%;height:auto;background:#fff;border-radius:6px;margin-bottom:14px;
+        box-shadow:0 6px 18px rgba(27,43,75,.12)}
+  .cv-actions{display:flex;gap:10px;margin:8px 0 30px}
+  .cv-actions .btn{flex:1;text-align:center;font-size:15px;padding:12px}
+</style>
+</head>
+<body>
+<main class="card" id="top">
+  <div class="top">
+    <img class="logo" src="logo.png" alt="Studio D – Dottori Commercialisti">
+  </div>
+  <div class="body">
+    <h1>Domenico D'Acquisto</h1>
+    <div class="role">Dottore Commercialista · Revisore Legale</div>
+    <div class="spec">CTU e Perito<span>Cripto-Asset Advisor</span></div>
+    <a class="btn btn-main" href="#cv" id="show-cv">Visualizza il curriculum</a>
+    <a class="btn btn-sec" href="contatto.vcf" download>Salva il contatto</a>
+    <div class="contacts">
+      <a href="tel:+3908119751643">+39 081 19751643</a><br>
+      <a href="mailto:m.dacquisto@studiodcommercialisti.it">m.dacquisto@studiodcommercialisti.it</a>
+    </div>
+  </div>
+  <div class="foot">
+    Viale Olimpico, 182 – 81031 Aversa (CE)<br>
+    <a href="https://www.studiodcommercialisti.it" target="_blank" rel="noopener">www.studiodcommercialisti.it</a>
+  </div>
+</main>
+
+<section id="cv" aria-label="Curriculum vitae">
+  <h2>Curriculum vitae</h2>
+  <img class="page" src="cv-1.jpg" alt="Curriculum vitae – pagina 1">
+  <img class="page" src="cv-2.jpg" alt="Curriculum vitae – pagina 2" loading="lazy">
+  <img class="page" src="cv-3.jpg" alt="Curriculum vitae – pagina 3" loading="lazy">
+  <img class="page" src="cv-4.jpg" alt="Curriculum vitae – pagina 4" loading="lazy">
+  <img class="page" src="cv-5.jpg" alt="Curriculum vitae – pagina 5" loading="lazy">
+  <div class="cv-actions">
+    <a class="btn btn-sec" href="CV-DAcquisto-cripto.pdf" download>Scarica il PDF</a>
+    <a class="btn btn-sec" href="#top">Torna su</a>
+  </div>
+</section>
+
+<script>
+  document.getElementById('show-cv').addEventListener('click', function (e) {
+    e.preventDefault();
+    var cv = document.getElementById('cv');
+    cv.classList.add('open');
+    cv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  if (location.hash === '#cv') document.getElementById('cv').classList.add('open');
+</script>
+</body>
+</html>
